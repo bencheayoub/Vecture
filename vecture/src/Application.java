@@ -15,6 +15,18 @@ public class Application {
         }
     }
 
+    double[] tabProd(Vecture[] V1, Vecture[] V2) {
+        if (V1.length != V2.length) throw new IllegalArgumentException("Vector arrays must have the same size.");
+        double[] V3 = new double[V1.length];
+        for (int i = 0; i < V1.length; i++) {
+            try {
+                V3[i] = V1[i].prodScal(V2[i]);
+            } catch (Exception ex) {
+                System.out.println("Impossible to calculate scalar product: " + ex.getMessage());
+            }
+        }
+        return V3;
+    }
 
 }
 

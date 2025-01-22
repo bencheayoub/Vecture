@@ -7,7 +7,7 @@ public class Application {
     }
 
     public void afficher(){
-        Collections.sort(list);// ehy i have an error here?
+        Collections.sort(list);
         Vecture vecture = new Vecture(3,0);
         for(Vecture i : list){
             if(i.tail() ==  vecture.tail()) System.out.println(i);
